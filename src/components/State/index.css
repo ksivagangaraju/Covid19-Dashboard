@@ -1,0 +1,648 @@
+.state-specific-bg-container {
+  min-height: 100vh;
+  background-color: #161625;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.btn-default {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+}
+
+.state-specific-container {
+  width: 1100px;
+  max-width: 100%;
+  margin: auto;
+  padding: 25px;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+
+.loader {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-specific-name-test-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.state-specific-name-heading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #f8fafc;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.state-specific-last-update {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #cbd5e1;
+}
+
+.state-specific-tested {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #94a3b8;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.state-specific-tested-count {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: right;
+  color: #94a3b8;
+}
+
+.state-specific-top-margin {
+  margin-top: 35px;
+}
+
+.bg-confirmed {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-radius: 12px;
+}
+
+.bg-confirmed:hover {
+  background-color: #331427;
+}
+
+.live-confirmed {
+  background-color: #331427;
+}
+
+.bg-active {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-radius: 12px;
+}
+
+.bg-active:hover {
+  background-color: #132240;
+}
+
+.live-active {
+  background-color: #132240;
+}
+
+.bg-recovered {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-radius: 12px;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+}
+
+.bg-recovered:hover {
+  background-color: #182829;
+}
+
+.live-recovered {
+  background-color: #182829;
+}
+
+.bg-deceased {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-radius: 12px;
+}
+
+.top-confirmed-color {
+  color: #ff073a;
+}
+
+.top-active-color {
+  color: #007bff;
+}
+
+.top-recovered-color {
+  color: #27a243;
+}
+
+.top-deceased-color {
+  color: #6c757d;
+}
+
+.bg-deceased:hover {
+  background-color: #212230;
+}
+
+.live-deceased {
+  background-color: #212230;
+}
+
+.state-specific-state-map-research-container {
+  padding: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.india-map-container {
+  width: 45%;
+}
+
+.india-map-img {
+  width: 420px;
+  height: 465px;
+}
+
+.state-specific-research-container {
+  width: 45%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.state-specific-ncp-report {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #94a3b8;
+}
+
+.state-specific-population {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f1f5f9;
+}
+
+.state-specific-count-report {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #94a3b8;
+  margin-top: 0;
+}
+
+.state-specific-report-as-date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #cbd5e1;
+  margin-top: 0;
+}
+
+.state-specific-top-districts {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.state-specific-top-districts-report-container {
+  padding-left: 0;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+
+.state-specific-top-districts-report-container::-webkit-scrollbar {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #cbd5e1;
+}
+
+.state-specific-top-districts-report-container::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 10px;
+}
+
+.state-specific-top-district-container {
+  width: 25%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.top-district-total {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #94a3b8;
+  width: 39%;
+}
+
+.top-district-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #94a3b8;
+  width: 59%;
+  padding-right: 2%;
+}
+
+.responsive-w-1200-bar-chart-container {
+  display: block;
+}
+
+.responsive-w-992-bar-chart-container {
+  display: none;
+}
+
+.responsive-w-768-bar-chart-container {
+  display: none;
+}
+
+.responsive-w-576-bar-chart-container {
+  display: none;
+}
+
+.responsive-w-360-bar-chart-container {
+  display: none;
+}
+
+.state-specific-spread-trends {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #cbd5e1;
+}
+
+.state-specific-cumulative-daily-container {
+  display: flex;
+  align-items: center;
+}
+
+.cumulative-btn {
+  width: 140px;
+  height: 60px;
+  background: #1e1e30;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-right: 2px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.daily-btn {
+  width: 140px;
+  height: 60px;
+  background: #1e1e30;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-right: 2px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.state-specific-select-districts-container {
+  width: 500px;
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.select-container {
+  color: #94a3b8;
+}
+
+.state-specific-line-chart-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.line-chart-confirmed-bg-color {
+  background-color: #331427;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+  border-radius: 12px;
+}
+
+.line-chart-active-bg-color {
+  background-color: #132240;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+  border-radius: 12px;
+}
+
+.line-chart-recovered-bg-color {
+  background-color: #182829;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+  border-radius: 12px;
+}
+
+.line-chart-deceased-bg-color {
+  background-color: #1c1c2b;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+  border-radius: 12px;
+}
+
+.line-chart-tested-bg-color {
+  background-color: #230f41;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .state-specific-top-district-container {
+    width: 33%;
+  }
+  .responsive-w-1200-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-992-bar-chart-container {
+    display: block;
+  }
+
+  .responsive-w-768-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-576-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-360-bar-chart-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cumulative-btn {
+    width: 113px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .daily-btn {
+    width: 113px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .state-specific-spread-trends {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .responsive-w-1200-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-992-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-768-bar-chart-container {
+    display: block;
+  }
+
+  .responsive-w-576-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-360-bar-chart-container {
+    display: none;
+  }
+  .state-specific-top-districts {
+    font-size: 24px;
+  }
+  .state-specific-top-district-container {
+    width: 33%;
+  }
+  .top-district-total {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .top-district-name {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .state-specific-population-tested-container {
+    display: flex;
+  }
+  .state-specific-population-report-container {
+    margin-right: 35px;
+  }
+  .state-specific-population {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .state-specific-count-report {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .state-specific-report-as-date {
+    font-size: 10px;
+  }
+  .state-specific-research-container {
+    width: 100%;
+    padding: 0;
+  }
+  .state-specific-ncp-report {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .state-specific-state-map-research-container {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 25px;
+  }
+  .india-map-container {
+    width: 100%;
+  }
+  .india-map-img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+  .state-specific-name-heading {
+    margin-top: 0;
+    font-size: 24px;
+    background: rgba(2, 132, 199, 0.16);
+    border-radius: 16px;
+    color: #0ea5e9;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .state-specific-last-update {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .state-specific-tested {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5px;
+  }
+  .state-specific-tested-count {
+    font-size: 16px;
+  }
+  .bg-confirmed {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .bg-active {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .bg-recovered {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .bg-deceased {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+.retry-container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retry-btn {
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+
+@media screen and (max-width: 576px) {
+  .state-specific-spread-trends {
+    text-align: center;
+  }
+  .state-specific-cumulative-daily-container {
+    display: flex;
+    justify-content: center;
+  }
+  .state-specific-top-district-container {
+    width: 50%;
+  }
+  .responsive-w-1200-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-992-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-768-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-576-bar-chart-container {
+    display: block;
+  }
+
+  .responsive-w-360-bar-chart-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .responsive-w-1200-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-992-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-768-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-576-bar-chart-container {
+    display: none;
+  }
+
+  .responsive-w-360-bar-chart-container {
+    display: block;
+  }
+}

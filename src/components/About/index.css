@@ -1,0 +1,143 @@
+.about-bg-container {
+  min-height: 100vh;
+  background-color: #161625;
+  color: #ffffff;
+  font-family: 'Roboto';
+  padding-bottom: 1px;
+}
+
+.about-container {
+  width: 1100px;
+  max-width: 100%;
+  padding: 24px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #f8fafc;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.about-covid19 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #e2e8f0;
+  margin-top: 32px;
+}
+
+.about-last-update {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #94a3b8;
+}
+
+.faq-container {
+  padding-left: 0;
+}
+
+.faq {
+  list-style: none;
+}
+
+.faq-question {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #94a3b8;
+  margin: 0;
+  margin-top: 24px;
+}
+
+.faq-answer {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #007bff;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.loader {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-mobile-container {
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .mobile-menu {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.355556px;
+    color: #94a3b8;
+    margin-right: 24px;
+    list-style-type: none;
+  }
+  .close-menu-container {
+    flex-grow: 1;
+    text-align: right;
+  }
+  .close-menu-btn {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  .close-menu-icon {
+    font-size: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  .about-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .about {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  .about-covid19 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .about-last-update {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .faq-question {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .faq-answer {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+}
