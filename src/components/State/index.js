@@ -603,7 +603,11 @@ export default class State extends Component {
               key={eachItem.districtName}
               className="state-specific-top-district-container"
             >
-              <p className="top-district-total">{eachItem[selectReport]}</p>
+              <p className="top-district-total">
+                {eachItem[selectReport] === undefined
+                  ? 0
+                  : eachItem[selectReport]}
+              </p>
               <p className="top-district-name">{eachItem.districtName}</p>
             </li>
           ))}
@@ -899,7 +903,10 @@ export default class State extends Component {
     }
     return (
       <>
-        <ul className="state-specific-line-chart-container responsive-w-1200-bar-chart-container">
+        <ul
+          className="state-specific-line-chart-container responsive-w-1200-bar-chart-container"
+          testid="lineChartsContainer"
+        >
           {reports.map(eachReport => (
             <li
               key={eachReport}
@@ -1559,8 +1566,8 @@ export default class State extends Component {
     }
   }
 
-  renderStateSuccessView = () => (
-    <div className="state-specific-container" testid="lineChartsContainer">
+  renderState = () => (
+    <div className="state-specific-container">
       {this.renderStateHeader()}
       {this.renderStateTotalReport()}
       {this.renderStateNCPReport()}
@@ -1568,28 +1575,6 @@ export default class State extends Component {
       <Footer />
     </div>
   )
-
-  renderStateInProgressView = () => (
-    <div testid="stateDetailsLoader" className="loader">
-      <Loader type="TailSpin" color="#007BFF" height={80} width={80} />
-    </div>
-  )
-
-  renderStateFailureView = () => <Redirect to="/not-found" />
-
-  renderState = () => {
-    const {apiStateStatus} = this.state
-    switch (apiStateStatus) {
-      case 'SUCCESS':
-        return this.renderStateSuccessView()
-      case 'IN PROGRESS':
-        return this.renderStateInProgressView()
-      case 'FAILURE':
-        return this.renderStateFailureView()
-      default:
-        return null
-    }
-  }
 
   render() {
     return (

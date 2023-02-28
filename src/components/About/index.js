@@ -29,6 +29,7 @@ class About extends Component {
     const response = await fetch('https://apis.ccbp.in/covid19-faqs')
     if (response.ok) {
       const data = await response.json()
+      console.log(data)
       const faqData = data.faq.map(eachItem => ({
         qno: eachItem.qno,
         question: eachItem.question,
@@ -80,38 +81,17 @@ class About extends Component {
     }
   }
 
-  renderFaq = faq => {
-    const {question, answer} = faq
-    return (
-      <>
-        <p className="faq-question">{question}</p>
-        <p className="faq-answer">{answer}</p>
-      </>
-    )
-  }
-
   renderAboutSuccessView = () => {
-    const {faqList, lastUpdated} = this.state
+    const {faqList} = this.state
     return (
-      <>
-        <div className="about-container">
-          <h1 className="about">About</h1>
-          {lastUpdated !== '' && (
-            <p className="about-last-update">{lastUpdated}</p>
-          )}
-          <p className="about-covid19">
-            COVID-19 vaccines be ready for distribution
-          </p>
-          <ul className="faq-container" testid="faqsUnorderedList">
-            {faqList.map(eachItem => (
-              <li className="faq" key={eachItem.qno}>
-                {this.renderFaq(eachItem)}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Footer />
-      </>
+      <ul className="faq-container" testid="faqsUnorderedList">
+        {faqList.map(eachItem => (
+          <li className="faq" key={eachItem.qno}>
+            <p className="faq-question">{eachItem.question}</p>
+            <p className="faq-answer">{eachItem.answer}</p>
+          </li>
+        ))}
+      </ul>
     )
   }
 
@@ -138,10 +118,21 @@ class About extends Component {
   }
 
   render() {
+    const {lastUpdated} = this.state
     return (
       <div className="about-bg-container">
         <Header />
-        {this.renderAbout()}
+        <div className="about-container">
+          <h1 className="about">About</h1>
+          {lastUpdated !== '' && (
+            <p className="about-last-update">{lastUpdated}</p>
+          )}
+          <p className="about-covid19">
+            COVID-19 vaccines be ready for distribution
+          </p>
+          {this.renderAbout()}
+        </div>
+        <Footer />
       </div>
     )
   }

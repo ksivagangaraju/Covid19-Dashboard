@@ -280,7 +280,7 @@ class Home extends Component {
           className="covid19-research-container confirmed"
           testid="countryWideConfirmedCases"
         >
-          <h1 className="covid19-headline">Confirmed</h1>
+          <p className="covid19-headline">Confirmed</p>
           <img
             src="https://res.cloudinary.com/dpmyvq5te/image/upload/v1675476017/Covid19/check-mark_1_foa8ww.png"
             alt="country wide confirmed cases pic"
@@ -292,7 +292,7 @@ class Home extends Component {
           className="covid19-research-container active"
           testid="countryWideActiveCases"
         >
-          <h1 className="covid19-headline">Active</h1>
+          <p className="covid19-headline">Active</p>
           <img
             src="https://res.cloudinary.com/dpmyvq5te/image/upload/v1675476017/Covid19/protection_1_wnebxj.png"
             alt="country wide active cases pic"
@@ -304,7 +304,7 @@ class Home extends Component {
           className="covid19-research-container recovered"
           testid="countryWideRecoveredCases"
         >
-          <h1 className="covid19-headline">Recovered</h1>
+          <p className="covid19-headline">Recovered</p>
           <img
             src="https://res.cloudinary.com/dpmyvq5te/image/upload/v1675476017/Covid19/recovered_1_wxrlag.png"
             alt="country wide recovered cases pic"
@@ -316,7 +316,7 @@ class Home extends Component {
           className="covid19-research-container deceased"
           testid="countryWideDeceasedCases"
         >
-          <h1 className="covid19-headline">Deceased</h1>
+          <p className="covid19-headline">Deceased</p>
           <img
             src="https://res.cloudinary.com/dpmyvq5te/image/upload/v1675476017/Covid19/breathing_1_jao8aq.png"
             alt="country wide deceased cases pic"
@@ -329,17 +329,17 @@ class Home extends Component {
   }
 
   clickAscendingOrder = () => {
-    this.setState({isAscOrder: true}, this.getStateUTData)
+    this.setState({isAscOrder: true})
   }
 
   clickDescendingOrder = () => {
-    this.setState({isAscOrder: false}, this.getStateUTData)
+    this.setState({isAscOrder: false})
   }
 
   renderCovid19Dashboard = () => (
     <div className="covid19-dashboard">
       <div className="covid19-sort-container">
-        <h1 className="state-sort">States/UT</h1>
+        <p className="state-sort">States/UT</p>
         <button
           type="button"
           className="sort-btn sort"
@@ -358,19 +358,19 @@ class Home extends Component {
         </button>
       </div>
       <div className="covid19-sort">
-        <h1 className="state-sort">Confirmed</h1>
+        <p className="state-sort">Confirmed</p>
       </div>
       <div className="covid19-sort">
-        <h1 className="state-sort">Active</h1>
+        <p className="state-sort">Active</p>
       </div>
       <div className="covid19-sort">
-        <h1 className="state-sort">Recovered</h1>
+        <p className="state-sort">Recovered</p>
       </div>
       <div className="covid19-sort">
-        <h1 className="state-sort">Deceased</h1>
+        <p className="state-sort">Deceased</p>
       </div>
       <div className="covid19-sort">
-        <h1 className="state-sort">Population</h1>
+        <p className="state-sort">Population</p>
       </div>
     </div>
   )
@@ -399,7 +399,7 @@ class Home extends Component {
   renderHomeSuccessView = () => {
     const {statesUTsCovid19, searchingInput, isAscOrder} = this.state
     const filteredStatesCovid19 = isAscOrder
-      ? statesUTsCovid19
+      ? statesUTsCovid19.sort((a, b) => (a.stateName > b.stateName ? 1 : -1))
       : statesUTsCovid19.sort((a, b) => (a.stateName < b.stateName ? 1 : -1))
     return (
       <div className="home-container">
@@ -424,7 +424,6 @@ class Home extends Component {
                 </ul>
               </div>
             </div>
-            <Footer />
           </>
         )}
       </div>
@@ -462,6 +461,7 @@ class Home extends Component {
       <div className="home-bg-container">
         <Header />
         {this.renderHome()}
+        <Footer />
       </div>
     )
   }

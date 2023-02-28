@@ -1,11 +1,11 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import {AiOutlineMenu} from 'react-icons/ai'
 import {GrFormClose} from 'react-icons/gr'
 
 import './index.css'
 
-export default class Header extends Component {
+class Header extends Component {
   state = {menuView: false}
 
   clickMenu = () => {
@@ -67,3 +67,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default withRouter(Header)
